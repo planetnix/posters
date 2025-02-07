@@ -17,7 +17,7 @@ jobs:
         run: typst compile posters.typ --font-path . posters.pdf
 
       - name: Build PNG Previews
-        run: 
+        run: |
           mkdir thumbnails
           typst compile posters.typ --font-path . thumbnails/posters-{0p}.png
           zip posters.zip thumbnails/*.png
