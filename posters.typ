@@ -38,7 +38,8 @@
   ]
 ]
 
-#poster(name: "Room 1", size: 4in)
-#poster(name: "Room 2", size: 4in)
-#poster(name: "Registration", size: 2.5in)
-#poster(name: "Check-In", size: 2.5in)
+#poster(name: "Sessions", size: 4in)
+#poster(name: "Workshops", size: 3in)
+#poster(name: "Check-In", size: 3in)
+#poster(name: "PlanetNix\nlocated Downstairs", size: 3in)
+#poster(name: "PlanetNix\nDownstairs in the \nConference Center", size: 1.75in)
