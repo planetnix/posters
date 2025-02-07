@@ -20,15 +20,16 @@
       in {
         packages = with pkgs; rec {
           planetNixSite = stdenv.mkDerivation {
-            name = "socal-nix-site";
+            name = "planetnix-posters";
             src = ./.;
             buildInputs = with pkgs; [
-              zola
+              typst
             ];
-            buildCommand = ''
-              cd $src
-              mkdir -p $out
-              zola build --output-dir $out/public
+            buildCommand = '''';
+
+            installPhase = ''
+              mkdir $out
+              typst compile --font-path ./fonts posters.typ $out/planetnix-posters.pdf
             '';
           };
 
@@ -36,9 +37,8 @@
         };
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            zola
             alejandra
-	    typst
+            typst
             tinymist
           ];
         };
