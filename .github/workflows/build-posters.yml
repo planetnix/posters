@@ -13,14 +13,26 @@ jobs:
       - name: Setup typst
         uses: typst-community/setup-typst@v3
 
-      - name: Build
+      - name: Build PDF
         run: typst compile posters.typ --font-path . posters.pdf
+
+      - name: Build PNG Previews
+        run: 
+          mkdir thumbnails
+          typst compile posters.typ --font-path . thumbnails/posters-{0p}.png
+          zip posters.zip thumbnails/*.png
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
+          name: Poster PDF File
           path: "*.pdf"
+
+      - name: Upload PNG Thumbs
+        uses: actions/upload-artifact@v4
+        with:
+         name: PNG Thumbs
+         path: "posters.zip"
 
       - name: Get current date
         id: date

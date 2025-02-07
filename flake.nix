@@ -40,6 +40,7 @@
             alejandra
             typst
             tinymist
+            zip
           ];
         };
       }
