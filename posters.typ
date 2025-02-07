@@ -3,8 +3,8 @@
 
 )
 #let poster_margin = .5in
-#let header_height = 4in
-#let footer_height = 4in
+#let header_height = 3.5in
+#let footer_height = 4.5in
 #let content_width = context(page.width - 2*poster_margin)
 #let content_height = context(page.height - 2*poster_margin)
 
@@ -31,7 +31,8 @@
 
       #rect(width: 100%, height: footer_height, stroke: none)[
         #align(top)[
-          #image("./images/logo.svg", height: 3in)
+          #image("./images/logo.svg", height: 2.25in)
+          #room-heading("planetnix.com/schedule", font-size: .5in)
         ]
       ]
     ]
