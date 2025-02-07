@@ -9,13 +9,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Compile Typst Files
-        uses: ammar-ahmed22/compile-typst-action@v1
-        with:
-          source_paths: 'posters.typ'
-          output_paths: 'posters.pdf'
-          fonts_path: '.'
+
+      - name: Setup typst
+        uses: typst-community/setup-typst@v3
+
+      - name: Build
+        run: typst compile posters.typ --font-path . --output posters.pdf
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
