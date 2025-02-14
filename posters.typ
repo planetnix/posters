@@ -33,7 +33,7 @@
 
       #rect(width: 100%, height: footer_height, stroke: none)[
         #align(top)[
-          #room-heading("Presented by:", font-size: .5in)
+          #room-heading("Presented By:", font-size: .5in)
           #image("./images/flox.svg", height: 2.25in)
         ]
       ]
