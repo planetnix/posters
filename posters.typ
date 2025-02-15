@@ -20,8 +20,7 @@
     #rect(width: 18in - 2*poster_margin, height: 24in - 2*poster_margin, stroke: none)[
      
       #rect(width: 100%, height: header_height, stroke: none)[
-        #image("./images/logo.svg", height: 2.25in)
-        #room-heading("planetnix.com/schedule", font-size: .5in)
+        #image("./images/logo.svg", height: 4in)
       ]
 
       #rect(width: 100%, height: 24in - (3*poster_margin + header_height + footer_height), stroke: none)[
@@ -32,17 +31,25 @@
 
 
       #rect(width: 100%, height: footer_height, stroke: none)[
-        #align(top)[
-          #room-heading("Presented By:", font-size: .5in)
-          #image("./images/flox.svg", height: 2.25in)
-        ]
+        #grid(
+          columns: 2,
+          gutter: 5in,
+          align(top)[
+            #room-heading("Presented By:", font-size: .5in)
+            #image("./images/flox.svg", height: 2in)
+          ],
+          align(top)[
+            #room-heading("Schedule:", font-size: .5in)
+            #image("./images/sched-code.svg", height: 2.25in)
+          ],
+        )
       ]
     ]
   ]
 ]
 
-#poster(name: "Sessions", size: 4in)
-#poster(name: "Workshops", size: 3in)
+#poster(name: "Sessions", size: 3in)
+#poster(name: "Workshops", size: 2.5in)
 #poster(name: "Check-In", size: 3in)
-#poster(name: "Planet Nix\nIs Located Downstairs", size: 2in)
-#poster(name: "Planet Nix\nDownstairs in the \nConference Center", size: 1.75in)
+#poster(name: "Located Downstairs", size: 2in)
+#poster(name: "Downstairs in the Conference Center", size: 1.75in)
